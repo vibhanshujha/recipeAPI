@@ -4,9 +4,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("recipe")
 public class Recipe {
+
+    private long id;
     private String ingridents;
     private String cookingSteps;
     private String recipeName;
+    private String imageUrl;
 
     public String getRecipeName() {
         return recipeName;
@@ -16,7 +19,7 @@ public class Recipe {
         this.recipeName = recipeName;
     }
 
-    private String imageUrl;
+
 
     public String getIngridents() {
         return ingridents;
@@ -40,6 +43,13 @@ public class Recipe {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
  /*   public Recipe(String ingridents, String cookingSteps, String imageUrl){
         super();
